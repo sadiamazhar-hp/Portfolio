@@ -1,0 +1,28 @@
+.odometer {
+    font-family: "Helvetica Neue", sans-serif;
+    line-height: 1.7em;
+    
+  }
+  
+  .odometer .odometer-value {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .odometer .odometer-ribbon-inner {
+    transform: translateY(0);
+    transition: transform 2s;
+    color: rgb(204, 94, 94);
+  }
+  
+  .odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner {
+    transform: translateY(-100%);
+    color: aquamarine;
+  }
+  
+  .odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner {
+    transform: translateY(100%);
+    color: blueviolet;
+  }
+  

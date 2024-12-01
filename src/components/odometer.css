@@ -1,0 +1,29 @@
+.odometer-container{
+    display: flex;
+    align-items: center;
+
+}
+.odometer-icon{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.odometer{
+    width: 300px;
+    height: 10px;
+    background-color: azure;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.odometer .line {
+    width: 0;
+    height: 8px;
+    background-color: #861c1c;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    border-radius: 10px;
+    transition: width 0.3s ease;}
+    

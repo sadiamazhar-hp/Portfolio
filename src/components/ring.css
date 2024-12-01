@@ -1,0 +1,31 @@
+.ring-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.ring {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 5px solid #4d0202 !important; /* Override any global style */
+    position: relative;
+}
+
+
+
+.circle {
+    width: 20px; 
+    position: relative;             /* Set the width of the circle */
+    height: 20px;             /* Set the height of the circle */
+    border-radius: 50%;        /* Make it a circle */
+    background-color: #810303; /* Set the background color */
+    display: flex;             /* Center content inside the circle */
+    align-items: center;       /* Vertically center */
+    justify-content: center;    /* Horizontally center */
+    color: white;           /* Text color */
+    font-size: 18px;  
+    left: 5px;     
+    top:5px;    /* Text size */
+}
