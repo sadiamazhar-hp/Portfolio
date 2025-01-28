@@ -8,6 +8,7 @@ body {
     padding-top: 60px;
     background-color: rgb(19, 12, 12);
     box-sizing: border-box;
+    height: 3900px;
 }
 html {
     scroll-behavior: smooth;
@@ -18,8 +19,8 @@ header {
     padding: 10px 0;
     position: fixed;
     width: 10%;
-    left:90%;
-    top: 30%;
+    right:0rem;
+    top: 10rem;
     z-index: 1000;
 }
 .hamburger {
@@ -81,9 +82,9 @@ header {
     left: 0; /* Adjust as needed */
     color: white;
     padding: 10px 0;
-    position: fixed;
+    position: sticky;
     width: 100%; /* Adjust as needed */
-    top: 30%; /* Adjust as needed */
+    top: 10rem; /* Adjust as needed */
     z-index: 1000;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
@@ -123,7 +124,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
- 
+
 section {
    
     border-radius: 8px;
@@ -237,15 +238,35 @@ footer {
     color: white;
 }
 #resume {
-    position: absolute;
-    top:70%;
-    cursor: pointer;
-    width:160px;
-    height:40px;
-    right: 24%;
-    background-color: #940e0e;
-    border: none;
-    border-radius: 4px;
+  position: absolute;
+  top: 70%;
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+  right: 24%;
+  background-color: #940e0e;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Add a transition for smoothness */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #resume {
+      width: 120px; /* Adjust width for smaller screens */
+      height: 35px; /* Adjust height for smaller screens */
+      right: 10%; /* Move the button closer to the center */
+      top: 80%; /* Adjust top position to avoid overlap */
+  }
+}
+
+@media (max-width: 480px) {
+  #resume {
+      width: 100px; /* Further adjust width for very small screens */
+      height: 30px; /* Further adjust height for very small screens */
+      right: 5%; /* Move the button closer to the center */
+      top: 85%; /* Further adjust top position to avoid overlap */
+  }
 }
 #resume:hover {
     background-color: #000000;
@@ -567,3 +588,78 @@ footer {
     width:max-content;
     height:auto;
     border-radius: 10px;*/
+     /* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  header {
+      padding: 10px;
+      justify-content: space-between;
+  }
+
+  .navbar {
+      width: 80%;
+      top: 60%;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+  header {
+    
+    
+    right:2rem;
+    
+  }
+  .odometer{
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 60px;
+  }
+  
+}
+
+@media screen and (max-width:450px){
+  .navbar {
+      width: 10%; /* Same as your original style */
+      right:10vw;
+      top: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      animation: none;
+  }
+  header {
+    
+    
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 10%;
+    right:25vw;
+    top: 10rem;
+    z-index: 1000;
+    
+  }
+  #skillset .odometer{
+    margin-left: 3rem;
+  }
+  .exp{
+    width:90%;
+  }
+  .expsec{
+    margin-left: 0px;
+  }
+  .h-lineheight{
+    height: 16rem;
+  }
+  /* .hamburger {
+      display: none;
+  } */
+  #social{
+    margin-top: 80%;
+  }
+}

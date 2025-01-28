@@ -37,12 +37,12 @@ const Timeline = () => {
         <div ref={(el) => {
             timelineRef.current = el; // Set reference to main div
             ref(el); // Attach ref to the Intersection Observer
-        }} className="flex flex-col justify-start items-start sm:text-lg p-4 relative ml-20 flex-wrap">
+        }} className="flex flex-col justify-start items-start sm:text-lg p-4 relative ml-20 flex-wrap expsec">
             {TimelineElement.map((element, index) => (
                 <div key={index} className="flex items-center w-full h-lineheight">
                     <div className=""><Ring active={inView} /></div>
                     {/* Card */}
-                    <div ref={(el) => (textRef.current[index] = el)} className='relative shadow-sh hover:shadow-sh-light transition-shadow duration-300 bg-gray-300 w-80 p-4 rounded-lg shadow-lg'>
+                    <div ref={(el) => (textRef.current[index] = el)} className='relative shadow-sh hover:shadow-sh-light transition-shadow duration-300 bg-gray-300 w-80 p-4 rounded-lg shadow-lg exp'>
                         <div className='text-lg font-bold text-gray-800 uppercase'>{element.title}</div>
                         <div className="text-sm text-gray-400 relative">{element.date}</div>
                         <div className='text-sm text-gray-700 mt-2 mb-2'>{element.description}</div>

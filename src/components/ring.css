@@ -6,13 +6,15 @@
 }
 
 .ring {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) #ffffff; /* Ring shadow is black */
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 5px solid #4d0202 !important; /* Override any global style */
     position: relative;
 }
-
 
 
 .circle {
