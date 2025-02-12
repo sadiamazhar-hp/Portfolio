@@ -48,9 +48,9 @@ const Timeline = () => {
                         <div className='text-sm text-gray-700 mt-2 mb-2'>{element.description}</div>
                         <div className="flex flex-wrap mt-2">
                             {element.teckstack.map((tech, index) => (
-                                <span key={index} className='text-xs text-gray-200 bg-gray-600 rounded-md shadow-lg m-1 px-2 py-1'>
-                                    {tech}
-                                </span>
+                               <span key={index} style={{ backgroundColor: '#bdb9b9' }} className='text-xs text-gray-200 rounded-md shadow-lg m-1 px-2 py-1'>
+                                {tech}
+                            </span>
                             ))}
                         </div>
                     </div>
