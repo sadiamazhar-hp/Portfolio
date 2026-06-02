@@ -1,21 +1,20 @@
-// useAnimateOnScroll.js
 import { useEffect, useRef, useState } from 'react';
-import { isElementInViewport } from '../components/utitlity'; // Assuming you have this utility function
+import { isElementInViewport } from '../components/utitlity';
 
 const useAnimateOnScroll = (animation) => {
     const elementRef = useRef(null);
     const [isVisible, setVisible] = useState(false);
 
-    const handleScroll = () => {
-        if (isElementInViewport(elementRef)) {
-            setVisible(true);
-            window.removeEventListener('scroll', handleScroll);
-        }
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            if (isElementInViewport(elementRef)) {
+                setVisible(true);
+                window.removeEventListener('scroll', handleScroll);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll); // Cleanup
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {

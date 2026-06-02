@@ -8,19 +8,21 @@ const Ring = ({ active, index = 0 }) => {
     const line1 = useRef(null);
     const line2 = useRef(null);
 
-    const resetRing = () => {
-        gsap.set(mycircle.current, {
-            borderTopColor: '#3498db',
-            borderRightColor: '#3498db',
-            borderBottomColor: '#3498db',
-            borderLeftColor: '#3498db',
-        });
-        gsap.set(mycircle2.current, { opacity: 0 });
-        gsap.set(line1.current, { opacity: 0 });
-        gsap.set(line2.current, { opacity: 0 });
-    };
+    useEffect(() => {
+        if (!active) return undefined;
 
-    const drawing = () => {
+        const resetRing = () => {
+            gsap.set(mycircle.current, {
+                borderTopColor: '#3498db',
+                borderRightColor: '#3498db',
+                borderBottomColor: '#3498db',
+                borderLeftColor: '#3498db',
+            });
+            gsap.set(mycircle2.current, { opacity: 0 });
+            gsap.set(line1.current, { opacity: 0 });
+            gsap.set(line2.current, { opacity: 0 });
+        };
+
         resetRing();
 
         const ringDelay = index * 0.25;
@@ -99,12 +101,8 @@ const Ring = ({ active, index = 0 }) => {
                 });
             },
         });
-    };
 
-    useEffect(() => {
-        if (active) {
-            drawing();
-        }
+        return undefined;
     }, [active, index]);
 
     return (

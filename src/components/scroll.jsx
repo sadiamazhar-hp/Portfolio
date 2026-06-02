@@ -7,6 +7,8 @@ const ScrollTopPercentage = () => {
     const scrollValueRef = useRef(null);
 
     useEffect(() => {
+        const scrollElement = scrollElementRef.current;
+
         const updateScrollPercentage = () => {
             const scrollTopPos = document.documentElement.scrollTop;
             const calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -46,16 +48,15 @@ const ScrollTopPercentage = () => {
         window.addEventListener('scroll', updateScrollPercentage);
         window.addEventListener('load', updateScrollPercentage);
 
-        if (scrollElementRef.current) {
-            scrollElementRef.current.addEventListener('click', scrollToTop);
+        if (scrollElement) {
+            scrollElement.addEventListener('click', scrollToTop);
         }
 
-        // Cleanup event listeners on component unmount
         return () => {
             window.removeEventListener('scroll', updateScrollPercentage);
             window.removeEventListener('load', updateScrollPercentage);
-            if (scrollElementRef.current) {
-                scrollElementRef.current.removeEventListener('click', scrollToTop);
+            if (scrollElement) {
+                scrollElement.removeEventListener('click', scrollToTop);
             }
         };
     }, []);
