@@ -12,6 +12,8 @@ const skills = [
     { icon: './images/Postman.png', value: 61 },
     { icon: './images/git.png', value: 75 },
     { icon: './images/figma.png', value: 40 },
+    { icon: './images/jira.png', value: 60 },
+    { icon: './images/programing.png', value: 85 },
 ];
 
 const Skills = () => {

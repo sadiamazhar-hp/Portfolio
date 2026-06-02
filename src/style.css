@@ -364,7 +364,7 @@ footer {
   flex-direction: row;
   margin-left: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
