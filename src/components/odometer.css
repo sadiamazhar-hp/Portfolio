@@ -1,7 +1,8 @@
 .odometer-container{
     display: flex;
     align-items: center;
-
+    opacity: 0;
+    width: 100%;
 }
 .odometer-icon{
     width: 60px;
@@ -10,7 +11,8 @@
 }
 
 .odometer{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 10px;
     background-color: azure;
     position: relative;
